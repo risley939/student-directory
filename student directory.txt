@@ -1,0 +1,34 @@
+def student_directory():
+    students = []
+
+    def add_student(name, age, grade):
+        students.append({"name": name, "age": age, "grade": grade})
+    
+    def find_student(name):
+        for student in students:
+            if student["name"].lower() == name.lower():
+                print(f"Name: {student['name']}, Age: {student['age']}, Grade: {student['grade']}")
+                return
+        print("Student not found")
+    
+    def average_age():
+        if not students:
+            print("No students in the directory.")
+            return
+        avg_age = sum(student["age"] for student in students) / len(students)
+        print(f"Average age: {avg_age}")
+    
+    # Example usage
+    add_student("Alice", 20, "A")
+    add_student("Bob", 22, "B")
+    add_student("Charlie", 19, "A")
+    
+    find_student("Alice")
+    average_age()
+
+student_directory()
+
+Risley Otieno Onyango
+Pwani University
+risloti@gmail.com
+0713612858
